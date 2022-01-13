@@ -40,6 +40,11 @@ nav{
     list-style: none;
     margin-right: 40px;
 }
+.nav-bar .menu ul li:hover{
+    transform: scale(1.2);
+    transition: 0.3s ease-in;
+}
+
 .nav-bar .menu ul{
     display: flex;
 
