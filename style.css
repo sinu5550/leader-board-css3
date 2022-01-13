@@ -7,10 +7,12 @@ body{
     font-weight: 500;
     margin: 0;
     padding: 0;
+    
 }
 nav{
     height: 80px; 
     background-color: #562EFF;
+    
 }
 .nav-bar{
     color: white;
@@ -59,6 +61,7 @@ main{
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap;
 }
 .container{
     background-color: #ffffff;
@@ -141,9 +144,8 @@ a{
     background-color: transparent;
     border-radius: 10px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 10px;
+   
 }
 .courses img{
     width: 224px;
@@ -159,7 +161,7 @@ a{
    
     
 }
-.latest-course .latest-course-container .courses h3{
+ .latest-course-container .courses h3{
     margin-top: 5px;
 }
 .course-details{
@@ -199,53 +201,91 @@ a{
 }
 /* ----------------------------------------rasponsive----------------------------------------- */
 
-@media screen and (max-width:688px){
+@media only screen and (max-width:688px){
     body{
-        margin: 0px 0px;
+        margin: 0px;  
     }
 .nav-bar{
-    padding: 0px 10px;
-       
+    padding: 0px 10px;      
 }
 
-.players{
+.players, .top-blog-grid, .latest-course-container{
     grid-template-columns: repeat(1,1fr);
-    
+    column-gap: 0;  
 }
 .container{
-    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    max-width: 80%; 
+    border-radius: none;
 }
 .section-title{
     text-align: center;
 }
 .player{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    align-items: center;   
 }
-.top-blog-grid{
-    grid-template-columns: repeat(1,1fr);
+hr{
+    width: 70%;
 }
+
 .blogs{
     font-size: 15px;
     padding-right: 0px;
     margin-right: 0px;
     
  }
-.latest-course-container{
-    display: flex;
-    flex-direction: column;
-    
-}
+ .courses{
+     margin-bottom: 20px;
+     width: 250px;
+     display: flex;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     
+ }
+ 
+
+
 .nav-bar ul li, .nav-bar .logo p{
     display: none;
+    
 }
+
 
 }
 
-@media screen and (min-width: 688px) and (max-width: 992px){
+@media only screen and (min-width: 688px) and (max-width: 992px){
 .nav-bar{
     padding: 0px 40px;
-    display: none;
+    
 }
+.players, .latest-course-container{
+    grid-template-columns: repeat(2,1fr);
+    
+}
+.container{
+    width: 90%;
+    
+}
+.section-title{
+    text-align: center;
+}
+.courses{
+    margin-bottom: 20px;
+    width: 250px;
+    display: flex;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.blogs{
+    display: flex;
+    flex-direction: column;
+}
+
+
 }
