@@ -240,6 +240,9 @@ a{
     body{
         margin: 0px;  
     }
+    #sec1{
+        margin-top: 25%;
+    }
 .nav-bar{
     padding: 0px 0px;   
     flex-direction: column;
@@ -363,6 +366,9 @@ hr{
 .nav-bar{
     padding: 0px 40px;
     
+}
+#sec1{
+    margin-top: 15%;
 }
 .players, .latest-course-container{
     grid-template-columns: repeat(2,1fr);
